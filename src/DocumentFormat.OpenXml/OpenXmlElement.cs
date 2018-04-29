@@ -1789,9 +1789,7 @@ namespace DocumentFormat.OpenXml
 
                             if (isAttributesArrayAlreadyAvailable)
                             {
-                                // If the attributes array are not null, we need to get the bitField.
-                                string strValue = FixedAttributesArray[index].InnerText;
-                                bitField = translator.Converter.StringToValue(strValue);
+                                throw new Exception("isAttributesArrayAlreadyAvailable");
                             }
 
                             bitField = (value == "true" || value == "1") ? (bitField | translator.Trait) : (bitField & ~translator.Trait);
